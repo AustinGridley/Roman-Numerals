@@ -110,6 +110,16 @@ body {
     overflow: auto;
     text-overflow: auto;
   }
+  .textBox1{
+    font-size: 1.25em;
+    text-align: center;
+    color: white;
+    margin: 2.5em auto;
+    margin-top: 2%;
+    width: 400px;
+    overflow: auto;
+    text-overflow: auto;
+  }
   .smallText{
     text-align: center;
     color: white;

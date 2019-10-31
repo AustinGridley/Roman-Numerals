@@ -135,6 +135,136 @@ if (originalNumber>99999999) {
   {document.getElementById("romanOutput").innerHTML = printRomanNumber;
   }
 }
+function toNumber()  {
+  var  printNumber=0;
+  let romanInput = document.getElementById("inputNumber").value;
+  var originalRoman = romanInput.toUpperCase();
+  romanInput=romanInput.toUpperCase();
+  let num=0;
+  let num1=num+1;
+  if(romanInput[num]=="M"){ 
+    do
+    {
+      num=num+1;
+      num1=num+1;
+      printNumber = printNumber + 1000;
+    }
+    while (romanInput[num]=="M");
+     }
+     if(romanInput[num]=="C"&&romanInput[num1]=="M"){ 
+      do
+      {
+        num=num+1;
+        num1=num+1;
+      printNumber = printNumber + 900;
+      }
+      while (romanInput[num]=="C"&&romanInput[num1]=="M");
+       }
+     if(romanInput[num]=="D"){ 
+    do
+    {
+      num=num+1;
+      num1=num+1;
+      printNumber = printNumber + 500;
+    }
+    while (romanInput[num]=="D");
+    }
+    if(romanInput[num]=="C"&&romanInput[num1]=="D"){ 
+      do
+      {
+        num=num+1;
+        num1=num+1;
+        printNumber = printNumber + 400;
+      }
+      while (romanInput[num]=="C"&&romanInput[num1]=="D");
+      }
+    if(romanInput[num]=="C"){ 
+    do
+    {
+      num=num+1;
+      num1=num+1;
+      printNumber = printNumber + 100;
+    }
+    while (romanInput[num]=="C");
+    }
+    if(romanInput[num]=="X"&&romanInput[num1]=="C"){ 
+      do
+      {
+        num=num+1;
+        num1=num+1;
+        printNumber = printNumber + 90;
+      }
+      while (romanInput[num]=="X"&&romanInput[num1]=="C");
+      }
+    if(romanInput[num]=="L"){ 
+    do
+    {
+      num=num+1;
+      num1=num+1;
+      printNumber = printNumber + 50;
+    }
+    while (romanInput[num]=="L");
+    }
+    if(romanInput[num]=="X"&&romanInput[num1]=="L"){ 
+      do
+      {
+        num=num+1;
+        num1=num+1;
+        printNumber = printNumber + 40;
+      }
+      while (romanInput[num]=="X"&&romanInput[num1]=="L");
+      }
+    if(romanInput[num]=="X"){ 
+    do
+    {
+      num=num+1;
+      num1=num+1;
+      printNumber = printNumber + 10;
+    }
+    while (romanInput[num]=="X");
+    }
+    if(romanInput[num]=="I"&&romanInput[num1]=="X"){ 
+      do
+      {
+        num=num+1;
+        num1=num+1;
+        printNumber = printNumber + 9;
+      }
+      while (romanInput[num]=="I"&&romanInput[num1]=="X");
+      }
+    if(romanInput[num]=="V"){
+    do
+    {
+      num=num+1;
+      num1=num+1;
+      printNumber = printNumber + 5;
+    }
+    while (romanInput[num]=="V");
+    }
+    if(romanInput[num]=="I"&&romanInput[num1]=="V"){ 
+      do
+      {
+        num=num+1;
+        num1=num+1;
+        printNumber = printNumber + 4;
+      }
+      while (romanInput[num]=="I"&&romanInput[num1]=="V");
+      }
+    if(romanInput[num]=="I"){ 
+    do
+    {
+      num=num+1;
+      num1=num+1;
+      printNumber = printNumber + 1;
+    }
+    while (romanInput[num]=="I");
+    }
+    document.getElementById("originalOutputText1").innerHTML = "The Roman Numeral you want translated is:" ;
+    document.getElementById("originalOutput1").innerHTML = originalRoman;
+    document.getElementById("romanOutputText1").innerHTML = "The translation of your Roman Numeral to a Number is:";
+    document.getElementById("romanOutput1").innerHTML = printNumber;
+    
+}
   //  toRoman()
   //  console.log("h ", printRomanNumber);
    
